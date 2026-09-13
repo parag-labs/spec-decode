@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spec-decode"
+version = "0.1.0"
+description = "Speculative decoding from scratch: a draft model proposes tokens, the target model verifies them in one pass, and the emitted distribution is provably identical to sampling the target alone."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Parag Sawant" }]
+keywords = ["speculative-decoding", "llm", "inference", "sampling", "transformers"]
+dependencies = ["numpy>=1.24"]
+
+[project.scripts]
+spec-decode = "spec_decode.cli:main"
+
+[project.optional-dependencies]
+bench = ["matplotlib>=3.7"]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
