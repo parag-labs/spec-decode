@@ -1,0 +1,370 @@
+{
+  "config": {
+    "vocab": 32,
+    "n_tokens": 20000,
+    "draft_cost_ratio": 0.1,
+    "seed": 20240601
+  },
+  "by_k": {
+    "1": [
+      {
+        "agreement": 0.1,
+        "acceptance_rate": 0.387,
+        "tokens_per_step": 1.387,
+        "target_passes": 14420,
+        "tokens_per_target_pass": 1.387,
+        "speedup": 1.2609
+      },
+      {
+        "agreement": 0.2,
+        "acceptance_rate": 0.4506,
+        "tokens_per_step": 1.4505,
+        "target_passes": 13788,
+        "tokens_per_target_pass": 1.4505,
+        "speedup": 1.3187
+      },
+      {
+        "agreement": 0.3,
+        "acceptance_rate": 0.517,
+        "tokens_per_step": 1.517,
+        "target_passes": 13184,
+        "tokens_per_target_pass": 1.517,
+        "speedup": 1.3791
+      },
+      {
+        "agreement": 0.4,
+        "acceptance_rate": 0.5861,
+        "tokens_per_step": 1.586,
+        "target_passes": 12610,
+        "tokens_per_target_pass": 1.586,
+        "speedup": 1.4419
+      },
+      {
+        "agreement": 0.5,
+        "acceptance_rate": 0.6555,
+        "tokens_per_step": 1.6555,
+        "target_passes": 12081,
+        "tokens_per_target_pass": 1.6555,
+        "speedup": 1.505
+      },
+      {
+        "agreement": 0.6,
+        "acceptance_rate": 0.7239,
+        "tokens_per_step": 1.7238,
+        "target_passes": 11602,
+        "tokens_per_target_pass": 1.7238,
+        "speedup": 1.5671
+      },
+      {
+        "agreement": 0.7,
+        "acceptance_rate": 0.792,
+        "tokens_per_step": 1.792,
+        "target_passes": 11161,
+        "tokens_per_target_pass": 1.792,
+        "speedup": 1.629
+      },
+      {
+        "agreement": 0.8,
+        "acceptance_rate": 0.8594,
+        "tokens_per_step": 1.8594,
+        "target_passes": 10756,
+        "tokens_per_target_pass": 1.8594,
+        "speedup": 1.6904
+      },
+      {
+        "agreement": 0.9,
+        "acceptance_rate": 0.9286,
+        "tokens_per_step": 1.9285,
+        "target_passes": 10371,
+        "tokens_per_target_pass": 1.9285,
+        "speedup": 1.7531
+      },
+      {
+        "agreement": 0.95,
+        "acceptance_rate": 0.9643,
+        "tokens_per_step": 1.9643,
+        "target_passes": 10182,
+        "tokens_per_target_pass": 1.9643,
+        "speedup": 1.7857
+      },
+      {
+        "agreement": 1.0,
+        "acceptance_rate": 1.0,
+        "tokens_per_step": 2.0,
+        "target_passes": 10000,
+        "tokens_per_target_pass": 2.0,
+        "speedup": 1.8182
+      }
+    ],
+    "2": [
+      {
+        "agreement": 0.1,
+        "acceptance_rate": 0.2646,
+        "tokens_per_step": 1.5292,
+        "target_passes": 13079,
+        "tokens_per_target_pass": 1.5292,
+        "speedup": 1.2743
+      },
+      {
+        "agreement": 0.2,
+        "acceptance_rate": 0.3297,
+        "tokens_per_step": 1.6593,
+        "target_passes": 12053,
+        "tokens_per_target_pass": 1.6593,
+        "speedup": 1.3828
+      },
+      {
+        "agreement": 0.3,
+        "acceptance_rate": 0.3995,
+        "tokens_per_step": 1.7989,
+        "target_passes": 11118,
+        "tokens_per_target_pass": 1.7989,
+        "speedup": 1.4991
+      },
+      {
+        "agreement": 0.4,
+        "acceptance_rate": 0.4664,
+        "tokens_per_step": 1.9326,
+        "target_passes": 10349,
+        "tokens_per_target_pass": 1.9326,
+        "speedup": 1.6105
+      },
+      {
+        "agreement": 0.5,
+        "acceptance_rate": 0.5454,
+        "tokens_per_step": 2.0907,
+        "target_passes": 9566,
+        "tokens_per_target_pass": 2.0907,
+        "speedup": 1.7423
+      },
+      {
+        "agreement": 0.6,
+        "acceptance_rate": 0.6204,
+        "tokens_per_step": 2.2406,
+        "target_passes": 8926,
+        "tokens_per_target_pass": 2.2406,
+        "speedup": 1.8672
+      },
+      {
+        "agreement": 0.7,
+        "acceptance_rate": 0.7015,
+        "tokens_per_step": 2.4027,
+        "target_passes": 8324,
+        "tokens_per_target_pass": 2.4027,
+        "speedup": 2.0022
+      },
+      {
+        "agreement": 0.8,
+        "acceptance_rate": 0.7977,
+        "tokens_per_step": 2.5954,
+        "target_passes": 7706,
+        "tokens_per_target_pass": 2.5954,
+        "speedup": 2.1628
+      },
+      {
+        "agreement": 0.9,
+        "acceptance_rate": 0.8954,
+        "tokens_per_step": 2.7906,
+        "target_passes": 7167,
+        "tokens_per_target_pass": 2.7906,
+        "speedup": 2.3255
+      },
+      {
+        "agreement": 0.95,
+        "acceptance_rate": 0.9475,
+        "tokens_per_step": 2.8948,
+        "target_passes": 6909,
+        "tokens_per_target_pass": 2.8948,
+        "speedup": 2.4123
+      },
+      {
+        "agreement": 1.0,
+        "acceptance_rate": 1.0,
+        "tokens_per_step": 2.9999,
+        "target_passes": 6667,
+        "tokens_per_target_pass": 2.9999,
+        "speedup": 2.4999
+      }
+    ],
+    "4": [
+      {
+        "agreement": 0.1,
+        "acceptance_rate": 0.1563,
+        "tokens_per_step": 1.625,
+        "target_passes": 12308,
+        "tokens_per_target_pass": 1.625,
+        "speedup": 1.1607
+      },
+      {
+        "agreement": 0.2,
+        "acceptance_rate": 0.1978,
+        "tokens_per_step": 1.7912,
+        "target_passes": 11166,
+        "tokens_per_target_pass": 1.7912,
+        "speedup": 1.2794
+      },
+      {
+        "agreement": 0.3,
+        "acceptance_rate": 0.2525,
+        "tokens_per_step": 2.0098,
+        "target_passes": 9951,
+        "tokens_per_target_pass": 2.0098,
+        "speedup": 1.4356
+      },
+      {
+        "agreement": 0.4,
+        "acceptance_rate": 0.3122,
+        "tokens_per_step": 2.2487,
+        "target_passes": 8894,
+        "tokens_per_target_pass": 2.2487,
+        "speedup": 1.6062
+      },
+      {
+        "agreement": 0.5,
+        "acceptance_rate": 0.3933,
+        "tokens_per_step": 2.573,
+        "target_passes": 7773,
+        "tokens_per_target_pass": 2.573,
+        "speedup": 1.8379
+      },
+      {
+        "agreement": 0.6,
+        "acceptance_rate": 0.4832,
+        "tokens_per_step": 2.933,
+        "target_passes": 6819,
+        "tokens_per_target_pass": 2.933,
+        "speedup": 2.095
+      },
+      {
+        "agreement": 0.7,
+        "acceptance_rate": 0.58,
+        "tokens_per_step": 3.3195,
+        "target_passes": 6025,
+        "tokens_per_target_pass": 3.3195,
+        "speedup": 2.3711
+      },
+      {
+        "agreement": 0.8,
+        "acceptance_rate": 0.6975,
+        "tokens_per_step": 3.7893,
+        "target_passes": 5278,
+        "tokens_per_target_pass": 3.7893,
+        "speedup": 2.7067
+      },
+      {
+        "agreement": 0.9,
+        "acceptance_rate": 0.8412,
+        "tokens_per_step": 4.3649,
+        "target_passes": 4582,
+        "tokens_per_target_pass": 4.3649,
+        "speedup": 3.1178
+      },
+      {
+        "agreement": 0.95,
+        "acceptance_rate": 0.9128,
+        "tokens_per_step": 4.6512,
+        "target_passes": 4300,
+        "tokens_per_target_pass": 4.6512,
+        "speedup": 3.3223
+      },
+      {
+        "agreement": 1.0,
+        "acceptance_rate": 1.0,
+        "tokens_per_step": 5.0,
+        "target_passes": 4000,
+        "tokens_per_target_pass": 5.0,
+        "speedup": 3.5714
+      }
+    ],
+    "8": [
+      {
+        "agreement": 0.1,
+        "acceptance_rate": 0.0779,
+        "tokens_per_step": 1.623,
+        "target_passes": 12323,
+        "tokens_per_target_pass": 1.623,
+        "speedup": 0.9017
+      },
+      {
+        "agreement": 0.2,
+        "acceptance_rate": 0.101,
+        "tokens_per_step": 1.8075,
+        "target_passes": 11065,
+        "tokens_per_target_pass": 1.8075,
+        "speedup": 1.0042
+      },
+      {
+        "agreement": 0.3,
+        "acceptance_rate": 0.1365,
+        "tokens_per_step": 2.0923,
+        "target_passes": 9559,
+        "tokens_per_target_pass": 2.0923,
+        "speedup": 1.1624
+      },
+      {
+        "agreement": 0.4,
+        "acceptance_rate": 0.1732,
+        "tokens_per_step": 2.3855,
+        "target_passes": 8384,
+        "tokens_per_target_pass": 2.3855,
+        "speedup": 1.3253
+      },
+      {
+        "agreement": 0.5,
+        "acceptance_rate": 0.2361,
+        "tokens_per_step": 2.8885,
+        "target_passes": 6924,
+        "tokens_per_target_pass": 2.8885,
+        "speedup": 1.6047
+      },
+      {
+        "agreement": 0.6,
+        "acceptance_rate": 0.3058,
+        "tokens_per_step": 3.4465,
+        "target_passes": 5803,
+        "tokens_per_target_pass": 3.4465,
+        "speedup": 1.9147
+      },
+      {
+        "agreement": 0.7,
+        "acceptance_rate": 0.4156,
+        "tokens_per_step": 4.3243,
+        "target_passes": 4625,
+        "tokens_per_target_pass": 4.3243,
+        "speedup": 2.4024
+      },
+      {
+        "agreement": 0.8,
+        "acceptance_rate": 0.5564,
+        "tokens_per_step": 5.4511,
+        "target_passes": 3669,
+        "tokens_per_target_pass": 5.4511,
+        "speedup": 3.0284
+      },
+      {
+        "agreement": 0.9,
+        "acceptance_rate": 0.7344,
+        "tokens_per_step": 6.8752,
+        "target_passes": 2909,
+        "tokens_per_target_pass": 6.8752,
+        "speedup": 3.8196
+      },
+      {
+        "agreement": 0.95,
+        "acceptance_rate": 0.8449,
+        "tokens_per_step": 7.758,
+        "target_passes": 2578,
+        "tokens_per_target_pass": 7.758,
+        "speedup": 4.31
+      },
+      {
+        "agreement": 1.0,
+        "acceptance_rate": 1.0,
+        "tokens_per_step": 8.9969,
+        "target_passes": 2223,
+        "tokens_per_target_pass": 8.9969,
+        "speedup": 4.9983
+      }
+    ]
+  }
+}
