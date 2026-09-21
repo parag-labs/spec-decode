@@ -114,6 +114,43 @@ trace  = generate_speculative(target, draft, prefix=[0], n_tokens=200, k=4,
 print(trace.tokens_per_step, trace.acceptance_rate)
 ```
 
+## The core in six languages
+
+The exactness proof and the sampler around it are pure, deterministic logic, so
+the algorithmic core is implemented **identically in six languages**. Every port
+is a line-for-line match on behaviour — same accept/reject rule, same residual,
+same closed-form induced distribution — verified by its own native test suite.
+
+| Language   | Location   | Tests | Runner            |
+|------------|------------|-------|-------------------|
+| Python     | `src/`     | 22    | pytest            |
+| Go         | `go/`      | 39    | `go test`         |
+| Rust       | `rust/`    | 39    | `cargo test`      |
+| C#         | `csharp/`  | 39    | `dotnet test`     |
+| Java       | `java/`    | 39    | JUnit 5 (Maven)   |
+| TypeScript | `ts/`      | 39    | Vitest            |
+
+**What the ports cover.** The deterministic core: the exactness proof
+(`induced_from_dists`, `induced_next_token_distribution`, `max_total_variation`),
+the `MarkovModel` oracle built from an explicit transition matrix, the
+distribution helpers (`normalize`, and `sample` by inverse-CDF), the accept/reject
+sampler (`residual`, `accept_probability`, `speculative_step`,
+`generate_speculative`, `generate_target_only`), the `Trace` accounting, and
+`expected_speedup`.
+
+**What they deliberately exclude.** The numpy-backed glue that isn't part of the
+algorithm: the PCG64 random stream (`rng.choice` / `random` / `dirichlet`), the
+Dirichlet-based `random_markov` and `draft_from_target` construction helpers, the
+CLI, and the matplotlib benchmark harness. Those stay Python-only.
+
+**On randomness.** Sampling is parameterised over an injected uniform source in
+`[0, 1)`; `sample` normalises then does inverse-CDF lookup, consuming exactly one
+uniform per draw. A *scripted* RNG reproduces the hand-derived accept/reject
+scenarios bit-for-bit across all six languages; a bulk PRNG (a 64-bit LCG, or
+mulberry32 in TypeScript) drives the many-trials statistical checks and is not
+required to match across languages. This is what makes the sampler's state
+machine — not just the closed-form proof — deterministically testable everywhere.
+
 ## Design decisions
 
 - **A model is just `next_dist(prefix) -> distribution`** — toy Markov oracles in
@@ -131,16 +168,25 @@ Trade-offs and non-goals (not a server, not tree speculation) are argued out in
 
 ```
 spec-decode/
-├── src/spec_decode/
+├── src/spec_decode/     # Python reference
 │   ├── models.py        # Model protocol + deterministic toy models
 │   ├── speculative.py   # acceptance sampler, one step, generate, cost accounting
 │   ├── proof.py         # closed-form induced distribution (the exactness proof)
 │   └── cli.py           # verify / run / sweep
 ├── tests/               # 22 tests: closed-form exactness, empirical match, mechanics
+├── go/                  # Go port      (go test,     39 tests)
+├── rust/                # Rust port    (cargo test,  39 tests)
+├── csharp/              # C# port      (dotnet test, 39 tests)
+├── java/                # Java port    (JUnit 5,     39 tests)
+├── ts/                  # TypeScript port (Vitest,   39 tests)
 ├── bench/               # benchmark + committed graphs
 ├── DESIGN.md
 └── BENCHMARKS.md
 ```
+
+The five ports cover the deterministic algorithmic core (proof + Markov oracle +
+accept/reject sampler with an injected RNG); numpy's random stream, the Dirichlet
+construction helpers, the CLI, and the benchmark harness remain Python-only.
 
 ## References
 

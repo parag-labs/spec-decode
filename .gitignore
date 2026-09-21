@@ -8,3 +8,17 @@ dist/
 .venv/
 venv/
 *.egg
+
+# Rust
+rust/target/
+rust/Cargo.lock
+
+# Node / TypeScript
+node_modules/
+
+# C# / .NET
+bin/
+obj/
+
+# Java / Maven
+target/

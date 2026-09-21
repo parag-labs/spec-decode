@@ -1,0 +1,10 @@
+[package]
+name = "spec-decode"
+version = "0.1.0"
+edition = "2021"
+description = "Deterministic core of speculative decoding: the accept/reject sampler and its closed-form exactness proof."
+license = "MIT"
+
+[lib]
+name = "spec_decode"
+path = "src/lib.rs"
