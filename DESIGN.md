@@ -1,5 +1,10 @@
 # Design notes
 
+![architecture](docs/diagrams/architecture.png)
+
+*The whole system on one page: the model oracle, the speculative step, and the two
+claims it checks. Vector source: [docs/diagrams/architecture.svg](docs/diagrams/architecture.svg).*
+
 ## Problem and goals
 
 Large models are slow to sample because generation is serial: each token needs a
